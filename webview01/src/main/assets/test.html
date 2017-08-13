@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chatset="utf-8"/>
+    <title>This is a test</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        }
+        a{
+        display: block;
+        width: 100px;
+        padding: 1em;
+        margin: 0 auto;
+        font-size: 1em;
+        color: #FFF;
+        background-color: highlight;
+        text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<a>js中调用本地方法</a>
+<script>
+    
+    function funFromjs(){
+    	document.getElementById("helloweb").innerHTML="HelloWebView,i'm from js";
+    }
+    var aTag = document.getElementsByTagName('a')[0];
+    aTag.addEventListener('click', function(){
+        //调用android本地方法
+		andriodweb.fun1FromAndroid("调用android本地方法fun1FromAndroid(String name)！！");
+        return false;
+    }, false);
+
+</script>
+<p></p>
+<div id="helloweb">
+
+</div>
+</body>
+<body>
+this is my html <br/>
+<a onClick="window.andriodweb.startFunction()">点击调用java代码</a><br/>
+<a onClick="window.andriodweb.startFunction('hello world')" >点击调用java代码并传递参数</a>
+<br/>
+<div id="content">内容显示</div>
+</body>
+</html>
