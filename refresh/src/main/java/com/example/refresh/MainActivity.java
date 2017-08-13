@@ -33,7 +33,7 @@ public class MainActivity extends BaseActivity {
      */
     private List<DouBan.Detail> mDatas;
     private RefreshListView mListView;
-    private boolean isRefresh;
+    private boolean isRefresh; //是否要刷新
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
