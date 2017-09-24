@@ -8,17 +8,17 @@ import android.os.RemoteException;
 public class AidlService extends Service {
     private CatBinder catBinder;
 
-    //此处要继承Stub,实现ICat和IBinder接口
-    public class CatBinder extends ICat.Stub {
+        //此处要继承Stub,实现ICat和IBinder接口
+        public class CatBinder extends ICat.Stub {
 
-        @Override
+            @Override
         public String getColor() throws RemoteException {
-            return "梁坤";
+            return "梁坤11111111111";
         }
 
         @Override
         public double getWeight() throws RemoteException {
-            return 999.9;
+            return 999.999999999999999;
         }
     }
 
